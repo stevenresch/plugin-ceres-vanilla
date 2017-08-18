@@ -57,3 +57,8 @@
         isSearch: {% if services.template.isSearch() == "1" %}true{% else %}false{% endif %}
     };
 </script>
+
+
+    {% if services.webstoreConfig.getWebstoreConfig().googleRecaptchaApiWebsitekey | length > 0 %}
+        <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    {% endif %}
